@@ -12,7 +12,7 @@ class FicharioAluno{
     private:
         Aluno * alunos; 
     public:
-        FicharioAluno(Aluno []); // ou FicharioAluno(Aluno *)
+        FicharioAluno(Aluno *); // ou FicharioAluno(Aluno *)
 
 };
 #endif
