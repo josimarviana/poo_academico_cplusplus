@@ -13,6 +13,10 @@ class FicharioAluno{
         Aluno * alunos; 
     public:
         FicharioAluno(Aluno *); // ou FicharioAluno(Aluno *)
-
+        void cadastrar();
+        void alterar();
+        void excluir();
+        void consultar();
+        void relatorio();
 };
 #endif

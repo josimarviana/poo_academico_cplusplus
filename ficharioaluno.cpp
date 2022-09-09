@@ -8,3 +8,20 @@ using std::endl;
 FicharioAluno::FicharioAluno(Aluno * _alunos){
         alunos = _alunos;
 }
+
+void FicharioAluno::cadastrar(){
+
+};
+void FicharioAluno::alterar(){
+
+};
+void FicharioAluno::excluir(){
+
+};
+void FicharioAluno::consultar(){
+
+};
+void FicharioAluno::relatorio(){
+        
+};
+
