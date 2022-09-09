@@ -7,14 +7,11 @@ using std::endl;
 Aluno::Aluno(){
 
 }
-Aluno::Aluno(string nome){
-    setNome(nome);
-}
-/*
-void setMatricula(string _matricula){
+
+Aluno::Aluno(string _matricula, string _cpf, string _nome, string _telefone, string _email){
     matricula = _matricula;
-}
-string getMatricula(){
-    return matricula;
-}
-*/
+    cpf = _matricula;
+    nome = _matricula;
+    telefone = _matricula;
+    email = _matricula; 
+};

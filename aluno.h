@@ -6,10 +6,10 @@ using std::string;
 
 class Aluno: public Pessoa{
     private:
-        string matricula;
+        string matricula, cpf, nome, telefone, email;
     public:
         Aluno();
-        Aluno(string);
+        Aluno(string, string, string, string, string);
         void setMatricula(const string);
         string getMatricula() const;
 
