@@ -4,10 +4,11 @@ using std::cin;
 using std::endl;
 #include "aluno.h"
 #include "ficharioaluno.h"
+#define TAM_ALUNOS 100
 
 int main(){
-        Aluno alunos[100]; 
-        FicharioAluno ficharioAluno(alunos);
+        Aluno alunos[TAM_ALUNOS]; 
+        FicharioAluno ficharioAluno(alunos, TAM_ALUNOS);
     
         int operacaoGeral, opCadastroAluno, opCadastroProfessor, opCadastroTurma, opCadastroEnturmacao;
         do {
@@ -38,18 +39,19 @@ int main(){
                                 break;
                                 /*
                             case 2:
-                                ficharioAluno.alterar( << endl;
-                                break;
+                                ficharioAluno.alterar();
+                                break;*/
                             case 3:
-                                ficharioAluno.excluir( << endl;
+                                ficharioAluno.excluir();
                                 break;
+                                /*
                             case 4:
-                                ficharioAluno.consultar( << endl;
-                                break;
-                            case 5:
-                                ficharioAluno.relatorio() << endl;
+                                ficharioAluno.consultar();
                                 break;
                                 */
+                            case 5:
+                                ficharioAluno.relatorio();
+                                break;
                             default:
                                 if (opCadastroAluno != 0) {
                                     cout << "Opção inválida." << endl;
@@ -74,19 +76,19 @@ int main(){
 
                         switch (opCadastroProfessor) {
                             case 1:
-                                ficharioProfessor.cadastrar( << endl;
+                                ficharioProfessor.cadastrar();
                                 break;
                             case 2:
-                                ficharioProfessor.alterar( << endl;
+                                ficharioProfessor.alterar();
                                 break;
                             case 3:
-                                ficharioProfessor.excluir( << endl;
+                                ficharioProfessor.excluir();
                                 break;
                             case 4:
-                                ficharioProfessor.consultar( << endl;
+                                ficharioProfessor.consultar();
                                 break;
                             case 5:
-                                ficharioProfessor.relatorio( << endl;
+                                ficharioProfessor.relatorio();
                                 break;
                             default:
                                 if (opCadastroProfessor != 0) {
@@ -112,19 +114,19 @@ int main(){
 
                         switch (opCadastroTurma) {
                             case 1:
-                                ficharioTurma.cadastrar( << endl;
+                                ficharioTurma.cadastrar();
                                 break;
                             case 2:
-                                ficharioTurma.alterar( << endl;
+                                ficharioTurma.alterar();
                                 break;
                             case 3:
-                                ficharioTurma.excluir( << endl;
+                                ficharioTurma.excluir();
                                 break;
                             case 4:
-                                ficharioTurma.consultar( << endl;
+                                ficharioTurma.consultar();
                                 break;
                             case 5:
-                                ficharioTurma.relatorio( << endl;
+                                ficharioTurma.relatorio();
                                 break;
                             default:
                                 if (opCadastroTurma != 0) {
@@ -148,16 +150,16 @@ int main(){
 
                         switch (opCadastroEnturmacao) {
                             case 1:
-                                ficharioEnturmacao.cadastrar( << endl;
+                                ficharioEnturmacao.cadastrar();
                                 break;
                             case 3:
-                                ficharioEnturmacao.excluir( << endl;
+                                ficharioEnturmacao.excluir();
                                 break;
                             case 4:
-                                ficharioEnturmacao.consultar( << endl;
+                                ficharioEnturmacao.consultar();
                                 break;
                             case 5:
-                                ficharioEnturmacao.relatorio( << endl;
+                                ficharioEnturmacao.relatorio();
                                 break;
                             default:
                                 if (opCadastroEnturmacao != 0) {

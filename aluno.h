@@ -10,8 +10,10 @@ class Aluno: public Pessoa{
     public:
         Aluno();
         Aluno(string, string, string, string, string);
-        void setMatricula(const string);
-        string getMatricula() const;
+        void setMatricula(string);
+        string getMatricula();
+        void setNome(string);
+        string getNome();
 
 };
 #endif

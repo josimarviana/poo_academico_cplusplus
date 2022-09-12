@@ -8,10 +8,23 @@ Aluno::Aluno(){
 
 }
 
-Aluno::Aluno(string _matricula, string _cpf, string _nome, string _telefone, string _email){
-    matricula = _matricula;
-    cpf = _matricula;
-    nome = _matricula;
-    telefone = _matricula;
-    email = _matricula; 
-};
+Aluno::Aluno(string matricula, string cpf, string nome, string telefone, string email){
+    this->matricula = matricula;
+    this->cpf = cpf;
+    this->nome = nome;
+    this->telefone = telefone;
+    this->email = email; 
+}
+
+void Aluno::setMatricula(string matricula){
+    this->matricula = matricula;
+}
+string Aluno::getMatricula(){
+    return matricula;
+}
+void Aluno::setNome(string matricula){
+    matricula = matricula;
+}
+string Aluno::getNome() {
+    return nome;
+}
