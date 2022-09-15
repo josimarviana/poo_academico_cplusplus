@@ -4,25 +4,27 @@ using std::cin;
 using std::endl;
 
 #include "aluno.h"
+
 Aluno::Aluno(){
 
 }
 
-Aluno::Aluno(string matricula, string cpf, string nome, string telefone, string email){
-    this->matricula = matricula;
+Aluno::Aluno(string cpf, string nome, string telefone, string email){
+    ++indice;
+    this->matricula = indice;
     this->cpf = cpf;
     this->nome = nome;
     this->telefone = telefone;
     this->email = email; 
 }
 
-void Aluno::setMatricula(string matricula){
+void Aluno::setMatricula(short int matricula){
     this->matricula = matricula;
 }
-string Aluno::getMatricula(){
+short int Aluno::getMatricula(){
     return matricula;
 }
-void Aluno::setNome(string matricula){
+void Aluno::setNome(string nome){
     matricula = matricula;
 }
 string Aluno::getNome() {

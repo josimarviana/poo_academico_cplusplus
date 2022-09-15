@@ -1,6 +1,8 @@
 #ifndef FICHARIOALUNO_H
 #define FICHARIOALUNO_H
 #include <iostream>
+#include <vector>
+using std::vector;
 using std::cout;
 using std::cin;
 using std::endl;
@@ -10,11 +12,11 @@ using std::string;
 
 class FicharioAluno{
     private:
-        Aluno * alunos; 
+        vector <Aluno> alunos;
         int qtdeAlunosFichario;
         int tamanhoFicharioAlunos;
     public:
-        FicharioAluno(Aluno [], int); // ou FicharioAluno(Aluno *)
+        FicharioAluno(vector <Aluno>);
         void cadastrar();
         void alterar();
         void excluir();

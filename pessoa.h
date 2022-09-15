@@ -5,7 +5,7 @@ using std::string;
 
 class Pessoa{
     private:
-        string nome, cpf, telefone, email;
+        string cpf, nome, telefone, email;
     public:
         Pessoa();
         Pessoa(string);

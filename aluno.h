@@ -6,14 +6,17 @@ using std::string;
 
 class Aluno: public Pessoa{
     private:
-        string matricula, cpf, nome, telefone, email;
+        short int matricula;
+        string cpf, nome, telefone, email;      
     public:
+        static int indice;
         Aluno();
-        Aluno(string, string, string, string, string);
-        void setMatricula(string);
-        string getMatricula();
+        Aluno(string, string, string, string);
+        void setMatricula(short int);
+        short int getMatricula();
         void setNome(string);
         string getNome();
-
+        friend bool operator==(Aluno&, Aluno&);
 };
+
 #endif

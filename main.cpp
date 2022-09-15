@@ -2,13 +2,17 @@
 using std::cout;
 using std::cin;
 using std::endl;
+#include <vector>
+using std::vector;
 #include "aluno.h"
 #include "ficharioaluno.h"
-#define TAM_ALUNOS 100
 
+#define TAM_ALUNOS 100
+int Aluno::indice=0;
 int main(){
-        Aluno alunos[TAM_ALUNOS]; 
-        FicharioAluno ficharioAluno(alunos, TAM_ALUNOS);
+        
+        vector<Aluno> alunos;
+        FicharioAluno ficharioAluno(alunos);
     
         int operacaoGeral, opCadastroAluno, opCadastroProfessor, opCadastroTurma, opCadastroEnturmacao;
         do {
@@ -37,18 +41,16 @@ int main(){
                             case 1:
                                 ficharioAluno.cadastrar();
                                 break;
-                                /*
+                                
                             case 2:
                                 ficharioAluno.alterar();
-                                break;*/
+                                break;
                             case 3:
                                 ficharioAluno.excluir();
                                 break;
-                                /*
                             case 4:
                                 ficharioAluno.consultar();
                                 break;
-                                */
                             case 5:
                                 ficharioAluno.relatorio();
                                 break;
@@ -134,7 +136,7 @@ int main(){
                                 }
                         }
 
-                    } while (opCadastroTurma != 0 << endl;
+                    } while (opCadastroTurma != 0;
 
                     break; // fim do case turma
                 case 4: // cadastro de enturmação
@@ -167,7 +169,7 @@ int main(){
                                 }
                         }
 
-                    } while (opCadastroEnturmacao != 0 << endl;
+                    } while (opCadastroEnturmacao != 0;
 
                     break; // fim do case da enturmacao
                     */
