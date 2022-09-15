@@ -30,3 +30,7 @@ void Aluno::setNome(string nome){
 string Aluno::getNome() {
     return nome;
 }
+
+bool Aluno::operator==(const Aluno& o) const {
+    return cpf == o.cpf;
+}

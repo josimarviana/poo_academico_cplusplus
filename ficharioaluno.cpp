@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<bits/stdc++.h>
 using std::vector;
 using std::find;
 using std::cout;
@@ -28,7 +29,9 @@ void FicharioAluno::cadastrar(){
 
         Aluno aluno(cpf, nome, telefone, email);
 
-        if(false){
+        // std::vector<Aluno>::iterator it;
+        auto it = find(alunos.begin(), alunos.end(), aluno);
+        if(it != alunos.end()){
             cout << "Aluno já cadastrado!";
         }else{
             alunos.push_back(aluno);

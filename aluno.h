@@ -10,6 +10,7 @@ class Aluno: public Pessoa{
         string cpf, nome, telefone, email;      
     public:
         static int indice;
+         bool operator==(const Aluno& o) const;
         Aluno();
         Aluno(string, string, string, string);
         void setMatricula(short int);
