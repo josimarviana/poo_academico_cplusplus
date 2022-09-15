@@ -32,7 +32,7 @@ void FicharioAluno::cadastrar(){
         // std::vector<Aluno>::iterator it;
         auto it = find(alunos.begin(), alunos.end(), aluno);
         if(it != alunos.end()){
-            cout << "Aluno já cadastrado!";
+            cout << "Aluno já cadastrado!"<< endl;
         }else{
             alunos.push_back(aluno);
         }
