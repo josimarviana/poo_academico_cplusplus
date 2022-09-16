@@ -6,8 +6,7 @@ using std::string;
 
 class Aluno: public Pessoa{
     private:
-        short int matricula;
-        string cpf, nome, telefone, email;      
+        short int matricula;    
     public:
         static int indice;
          bool operator==(const Aluno& o) const;

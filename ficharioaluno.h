@@ -13,8 +13,6 @@ using std::string;
 class FicharioAluno{
     private:
         vector <Aluno> alunos;
-        int qtdeAlunosFichario;
-        int tamanhoFicharioAlunos;
     public:
         FicharioAluno(vector <Aluno>);
         void cadastrar();

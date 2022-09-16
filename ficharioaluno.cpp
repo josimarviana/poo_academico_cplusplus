@@ -80,7 +80,7 @@ void FicharioAluno::excluir(){
         cin>>pos;
 
         
-        if(pos >= 0 || pos < qtdeAlunosFichario){
+        if(pos < alunos.size()){
             cout <<  "Aluno: " << alunos[pos].getNome() << " será excluído";
             cout<<"\nConfirmar a exclusao? (1-sim) e (2-não)" << endl;
             cin >> res;

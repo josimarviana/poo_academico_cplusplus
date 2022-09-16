@@ -4,8 +4,8 @@
 using std::string;
 
 class Pessoa{
-    private:
-        string cpf, nome, telefone, email;
+    protected:
+        string nome, cpf, telefone, email;
     public:
         Pessoa();
         Pessoa(string);
