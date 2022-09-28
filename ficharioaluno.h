@@ -9,8 +9,8 @@ using std::endl;
 #include <string>
 using std::string;
 #include "aluno.h"
-
-class FicharioAluno{
+#include "fichario.h"
+class FicharioAluno: public Fichario{
     private:
         vector <Aluno> alunos;
     public:
