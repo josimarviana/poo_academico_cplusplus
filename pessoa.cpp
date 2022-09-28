@@ -34,4 +34,12 @@ void Pessoa::setEmail(string _email){
 string Pessoa::getEmail() const{
     return email;
 }
+void Pessoa::setDataNascimento(const time_point<system_clock> dataNascimento){
+
+}
+
+time_point<system_clock> Pessoa::getDataNascimento() const{
+    return dataNascimento;
+};
+
 

@@ -6,8 +6,15 @@ using std::find;
 using std::cout;
 using std::cin;
 using std::endl;
+using std::string;
 #include "ficharioaluno.h"
 #include "aluno.h"
+#include <string>
+#include <chrono>
+#include <string>
+#include <sstream>
+#include <iostream>
+#include <sstream>
 
 FicharioAluno::FicharioAluno(vector <Aluno> alunos){
         this->alunos = alunos;
@@ -15,7 +22,7 @@ FicharioAluno::FicharioAluno(vector <Aluno> alunos){
 }
 
 void FicharioAluno::cadastrar(){
-        string nome, telefone, matricula, cpf, email;
+        string nome, telefone, matricula, cpf, email, dataNascimentoString;
         
         cout << " === Cadastrar ALUNO ==== " << endl;
         cout << "CPF: ";
@@ -26,8 +33,18 @@ void FicharioAluno::cadastrar(){
         cin >> telefone;
         cout << "Email: ";
         cin >> email;
+        cout << "Data de nascimento (dd/mm/yyyy): ";
+        cin >> dataNascimentoString;
 
-        Aluno aluno(cpf, nome, telefone, email);
+      //  std::chrono::system_clock::time_point dataNascimento;
+
+        std::tm tm = {};
+        std::stringstream dataNascimentoStringStream(dataNascimentoString);
+
+        dataNascimentoStringStream >> std::get_time(&tm, "%d/%m/%Y");
+        auto dataNascimento = std::chrono::system_clock::from_time_t(std::mktime(&tm));
+
+        Aluno aluno(cpf, nome, telefone, email, dataNascimento);
 
         // std::vector<Aluno>::iterator it;
         auto it = find(alunos.begin(), alunos.end(), aluno);
@@ -102,7 +119,7 @@ void FicharioAluno::consultar(){
         cin >> pos;
 
         if (pos < alunos.size()) {
-             cout << "Matrícula: " << alunos[pos].getMatricula() << " - Nome: " << alunos[pos].getNome() << " - Cpf: " << alunos[pos].getCpf() << " - Telefone: " << alunos[pos].getTelefone() << " - Email: " << alunos[pos].getEmail()<< endl;
+             cout << "Matrícula: " << alunos[pos].getMatricula() << " - Nome: " << alunos[pos].getNome() << " - Cpf: " << alunos[pos].getCpf() << " - Telefone: " << alunos[pos].getTelefone() << " - Email: " << alunos[pos].getEmail() << " - Data Nascimento: " <<  alunos[pos].getDataNascimentoString() << endl;
         } else {
             cout<< " Posicao inválida. ";
         }
@@ -110,7 +127,7 @@ void FicharioAluno::consultar(){
 void FicharioAluno::relatorio(){
         cout << "[Relatório de ALUNOS]" << endl;
         for (Aluno aluno: alunos) {
-                cout << "Matrícula: " << aluno.getMatricula() << " - Nome: " << aluno.getNome() << " - Cpf: " << aluno.getCpf() << " - Telefone: " << aluno.getTelefone() << " - Email: " << aluno.getEmail()<< endl;
+                cout << "Matrícula: " << aluno.getMatricula() << " - Nome: " << aluno.getNome() << " - Cpf: " << aluno.getCpf() << " - Telefone: " << aluno.getTelefone() << " - Email: " << aluno.getEmail() << " - Data Nascimento: " <<  aluno.getDataNascimentoString()  << endl;
         }
         cout << "---------------------" << endl;
 }
