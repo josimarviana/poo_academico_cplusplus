@@ -4,11 +4,13 @@
 #include <chrono>
 using std::string;
 #include "pessoa.h"
+#include "situacaoaluno.h"
 using namespace std::chrono;
 class Aluno: public Pessoa{
     private:
         short int matricula;  
         time_point<system_clock> dataNascimento;  
+        SituacaoAluno situacaoAluno;
     public:
         static int indice;
          bool operator==(const Aluno& o) const;

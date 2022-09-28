@@ -18,6 +18,7 @@ Aluno::Aluno(string cpf, string nome, string telefone, string email, time_point<
     this->telefone = telefone;
     this->email = email; 
     this->dataNascimento = dataNascimento;
+    this->situacaoAluno = SituacaoAluno::NAOMATRICULADO;
 
 }
 
