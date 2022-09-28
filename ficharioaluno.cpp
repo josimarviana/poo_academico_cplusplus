@@ -11,10 +11,8 @@ using std::string;
 #include "aluno.h"
 #include <string>
 #include <chrono>
-#include <string>
 #include <sstream>
 #include <iostream>
-#include <sstream>
 
 FicharioAluno::FicharioAluno(vector <Aluno> alunos){
         this->alunos = alunos;
